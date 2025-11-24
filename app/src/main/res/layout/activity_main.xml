@@ -125,13 +125,13 @@
     <EditText
         android:id="@+id/editPassword2"
         android:layout_width="match_parent"
-        android_layout_height="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:autofillHints="password"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnCancel"
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#4CAF50"
@@ -140,7 +140,7 @@
         app:rippleColor="#4CAF50" />
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btnCancel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#E91E63"

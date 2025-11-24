@@ -9,4 +9,6 @@
     <string name="retype_password">Ketik Ulang Password</string>
     <string name="send_button">Kirim</string>
     <string name="cancel_button">Batal</string>
+    <string name="dashboard_title">DASHBOARD</string>
+    <string name="logout_button">LOGOUT</string>
 </resources>

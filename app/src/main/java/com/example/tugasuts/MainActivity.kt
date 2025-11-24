@@ -1,5 +1,6 @@
 package com.example.tugasuts
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -26,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         val editLastName = findViewById<EditText>(R.id.editLastName)
         val editPassword = findViewById<EditText>(R.id.editPassword)
         val editPassword2 = findViewById<EditText>(R.id.editPassword2)
-        val btnKirim = findViewById<Button>(R.id.btnCancel)
-        val btnBatal = findViewById<Button>(R.id.btnSubmit)
+        val btnKirim = findViewById<Button>(R.id.btnSubmit)
+        val btnBatal = findViewById<Button>(R.id.btnCancel)
 
         btnKirim.setOnClickListener {
             val username = editUsername.text.toString()
@@ -70,16 +71,17 @@ class MainActivity : AppCompatActivity() {
 
             if (isValid) {
                 Toast.makeText(this, "Pendaftaran berhasil", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, DashboardActivity::class.java)
+                intent.putExtra("USERNAME", username)
+                intent.putExtra("EMAIL", email)
+                intent.putExtra("FIRST_NAME", firstName)
+                intent.putExtra("LAST_NAME", lastName)
+                startActivity(intent)
             }
         }
 
         btnBatal.setOnClickListener {
-            editUsername.text.clear()
-            editEmail.text.clear()
-            editFirstName.text.clear()
-            editLastName.text.clear()
-            editPassword.text.clear()
-            editPassword2.text.clear()
+            finish()
         }
     }
 }
